@@ -61,7 +61,7 @@
 				</ul>
 			</li>
 			<li><a href="blog.html">News</a></li>
-			<li><a href="contact.html">Contact</a></li>
+			<li><a href="/feedback">Contact</a></li>
 		</ul>
 	</header>
 	<!-- Header section end -->

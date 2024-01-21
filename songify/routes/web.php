@@ -4,6 +4,8 @@ use App\Http\Controllers\a_artistController;
 use App\Http\Controllers\a_indexController;
 use App\Http\Controllers\a_songController;
 use App\Http\Controllers\a_userController;
+use App\Http\Controllers\c_ArtistController;
+use App\Http\Controllers\c_feedbackController;
 use App\Http\Controllers\c_homeController;
 use App\Http\Controllers\c_playlistController;
 use App\Http\Controllers\loginController;
@@ -31,6 +33,8 @@ Route::get('/login', [loginController::class, 'index']);
 
 Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
+Route::get('/artist',[c_ArtistController::class,'index']);
+Route::get('/feedback',[c_feedbackController::class,'index']);
 
 Route::get('/admin',[a_indexController::class,'index']);
 Route::get('/admin/user',[a_userController::class,'index']);

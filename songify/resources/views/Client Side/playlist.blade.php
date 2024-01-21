@@ -1,4 +1,4 @@
-@extends('Client Side.constant.content');
+@extends('Client Side.constant.content')
 
 @section('main-section')
     <!-- Playlist section -->
