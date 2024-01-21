@@ -37,7 +37,7 @@ Route::get('/artist',[c_ArtistController::class,'index']);
 Route::get('/feedback',[c_feedbackController::class,'index']);
 
 Route::get('/admin',[a_indexController::class,'index']);
-Route::get('/admin/user',[a_userController::class,'index']);
+Route::get('/user',[a_userController::class,'index']);
 Route::get('/admin/song',[a_songController::class,'index']);
 Route::get('/admin/artist',[a_artistController::class,'index']);
 Route::get('/delete/{id}',[a_userController::class,'delete']);
