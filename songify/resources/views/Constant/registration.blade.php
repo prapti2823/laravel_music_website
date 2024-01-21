@@ -85,7 +85,7 @@
 
 					<div class="text-center p-t-90">
                         Already have an account ?
-						<a class="txt1 input100" href="/login">
+						<a class="txt1 input100" href="/loginPage">
 							Login
 						</a>
 					</div>
