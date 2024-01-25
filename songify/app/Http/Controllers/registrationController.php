@@ -9,7 +9,7 @@ class registrationController extends Controller
 {
     public function index()
     {
-        return view('Constant.registration');
+        return view('Client Side.registration');
     }
 
     public function store(Request $r)
@@ -21,10 +21,10 @@ class registrationController extends Controller
         //     "confirmPassword"=>"required"
         // ]);
 
-        $file=$r->file('photo');
-        $filename=$file->getClientOriginalName();
-        $path="uploads";
-        $file->move($path,$filename);
+        $file = $r->file('photo');
+        $filename = $file->getClientOriginalName();
+        $path = "uploads";
+        $file->move($path, $filename);
 
         $register = new usersData;
 
