@@ -43,17 +43,24 @@
 		<div class="header-right">
 			{{-- <a href="#" class="hr-btn">Help</a>
 			<span>|</span> --}}
+			
 			<div class="user-panel">
 				@if(session()->has('userid'))
-				<a href="/" class="register">{{session()->get('fullname')}}</a>
-				<a href="/" class="register"><img src={{session()->get('photo')}} class="rounded-circle" height="50" width="50"/></a>
-				{{-- <img src="uploads/{{$user->photo}}" class="rounded-circle" height="80" width="80"/> --}}
+					<li>
+					<a href="/" class="register">{{session()->get('fullname')}}</a>
+					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/></a>
+				
+					{{-- <ul class="sub-menu">
+						<li><a href="/logout">Logout</a></li>
+					</ul> --}}
+				</li>
 			@else	
 				<a href="/loginPage" class="login">Login</a>
 				<span>|</span>
 				<a href="/register" class="register">Create an account</a>
 			@endif
-			</div> 
+			</div>
+		
 		</div>
 		<ul class="main-menu">
 			<li><a href="/">Home</a></li>
