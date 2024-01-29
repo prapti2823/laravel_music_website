@@ -36,6 +36,6 @@ class registrationController extends Controller
 
         $register->save();
 
-        return redirect('/');
+     return redirect('/');
     }
 }
