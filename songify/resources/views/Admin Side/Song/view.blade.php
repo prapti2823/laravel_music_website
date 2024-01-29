@@ -7,11 +7,14 @@
 @section('main-section')
     <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">:: Songs List Table ::</h3>
+                  <h3 class="card-title">:: Songs List Table ::</h3><br><br>
+                  <a href="/add" class="btn btn-warning">Add New Song</a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
+                  
                   <table id="example1" class="table table-bordered table-striped">
+    
                     <thead>
                       <tr>
                         <th>Song Id</th>
@@ -19,71 +22,23 @@
                         <th>Song Path</th>
                         <th>Duration</th>
                         <th>Realese Date</th>
-                        <th>Artist Id</th>
-                        <th> Category Id</th>
+                        <th>Actions</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
+                      @foreach($songs as $songs)
                       <tr>
-                        <td>23</td>
-                        <td>Butter
+                        <td>{{$songs->songid}}</td>
+                        <td>{{$songs->songname}}
                         </td>
-                        <td>Path</td>
-                        <td> 1:30</td>
-                        <td>10/10/2021</td>
-                        <td>3</td>
-                        <td>21</td>
+                        <td>{{$songs->songpath}}</td>
+                        <td>{{$songs->duration}}</td>
+                        <td>{{$songs->realesedate}}</td>
+                        <td><a class="btn btn-primary btn-sm" href ="/edit/{{$songs->songid}}"> Edit</a>
+                          <a class="btn btn-danger btn-sm" href ="/delete/{{$songs->songid}}"> Delete</a></td>
                       </tr>
-                      <tr>
-                        <td>20</td>
-                        <td>Dynamite
-                        </td>
-                        <td>Path</td>
-                        <td> 1:40</td>
-                        <td>10/11/2021</td>
-                        <td>5</td>
-                        <td>24</td>
-                      </tr>
-                      <tr>
-                        <td>23</td>
-                        <td>Permission to dance
-                        </td>
-                        <td>Path</td>
-                        <td> 1:30</td>
-                        <td>10/10/2021</td>
-                        <td>3</td>
-                        <td>21</td>
-                      </tr>
-                      <tr>
-                        <td>23</td>
-                        <td>Butter
-                        </td>
-                        <td>Path</td>
-                        <td> 1:30</td>
-                        <td>10/10/2021</td>
-                        <td>3</td>
-                        <td>21</td>
-                      </tr>
-                      <tr>
-                        <td>23</td>
-                        <td>Butter
-                        </td>
-                        <td>Path</td>
-                        <td> 1:30</td>
-                        <td>10/10/2021</td>
-                        <td>3</td>
-                        <td>21</td>
-                      </tr>
-                      <tr>
-                        <td>23</td>
-                        <td>Butter
-                        </td>
-                        <td>Path</td>
-                        <td> 1:30</td>
-                        <td>10/10/2021</td>
-                        <td>3</td>
-                        <td>21</td>
-                      </tr>
+                      @endforeach
                      </tbody>
                     <tfoot>
                       <tr>
@@ -92,8 +47,8 @@
                         <th>Song Path</th>
                         <th>Duration</th>
                         <th>Realese Date</th>
-                        <th>Artist Id</th>
-                        <th> Category Id</th>
+                        <th>Actions</th>
+                        
                       </tr>
                     </tfoot>
                   </table>
