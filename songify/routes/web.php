@@ -39,20 +39,6 @@ Route::get('/feedback', [c_feedbackController::class, 'index']);
 
 Route::get('/adminPage', [a_indexController::class, 'index']);
 Route::get('/user', [a_userController::class, 'index']);
-Route::get('/song', [a_songController::class, 'index']);
+Route::get('/admin/song', [a_songController::class, 'index']);
 Route::get('/admin/artist', [a_artistController::class, 'index']);
 Route::get('/delete/{id}', [a_userController::class, 'delete']);
-Route::post('/store',[a_songController::class,'store']);
-Route::get('/add',function(){
-    return view('Admin Side.Song.add');
-      
-});
-Route::get('/delete/{id}', [a_songController::class, 'delete']);
-
-Route::get('/edit/{id}',[a_songController::class,'edit']);
-
-Route::post('/update',[a_songController::class,'update']);
-Route::get('/songs',function(){
-    return view('Client Side.song');
-      
-});

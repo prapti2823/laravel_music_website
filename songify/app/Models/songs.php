@@ -8,6 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class songs extends Model
 {
     use HasFactory;
-    protected $table="song";
-    protected $primarykey="songid";
 }

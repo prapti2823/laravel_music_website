@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>SolMusic</title>
+	<title>SolMusic | HTML Template</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="SolMusic HTML Template">
 	<meta name="keywords" content="music, html">
@@ -63,8 +63,8 @@
 					{{-- <li><a href="/category">Category</a></li> --}}
 					<li><a href="/playlist">Playlist</a></li>
 					<li><a href="/artist">Artist</a></li>
-					<li><a href="/songs">Songs</a></li>
-					{{--<li><a href="contact.html">Contact</a></li> --}}
+					{{-- <li><a href="blog.html">Blog</a></li>
+					<li><a href="contact.html">Contact</a></li> --}}
 				</ul>
 			</li>
 			<li><a href="blog.html">News</a></li>

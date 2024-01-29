@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('song', function (Blueprint $table) {
-            $table->id('songid');
-            $table->text('songname',70);
-            $table->text('songpath');
-            $table->text('duration',8);
-            $table->date('realesedate');
-           // $table->id('artistid')->unsigned();;
-            //$table->id('categoryid')->unsigned();;
-
+        Schema::create('songs', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -29,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('song');
+        Schema::dropIfExists('songs');
     }
 };

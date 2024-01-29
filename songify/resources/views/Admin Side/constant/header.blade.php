@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @stack('title')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -316,9 +316,7 @@
           </li>
           <li class="nav-item">
             <a href="/admin/artist" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-              </svg>&nbsp;&nbsp;&nbsp;
+              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Artist
                 {{-- <i class="right fas fa-angle-left"></i> --}}
@@ -352,12 +350,8 @@
             </ul> --}}
           </li>
           <li class="nav-item">
-            <a href="/song" class="nav-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-                <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
-                <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
-                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"/>
-              </svg></i>&nbsp;&nbsp;&nbsp;
+            <a href="/admin/song" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Songs
                 {{-- <i class="right fas fa-angle-left"></i> --}}
