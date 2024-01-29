@@ -4,6 +4,10 @@
     <title> Song View</title>
 @endpush
 
+@push('path')
+  {{"Song list"}}
+@endpush
+
 @section('main-section')
     <div class="card">
                 <div class="card-header">
@@ -21,7 +25,7 @@
                         <th>Song Title</th>
                         <th>Song Path</th>
                         <th>Duration</th>
-                        <th>Realese Date</th>
+                        <th>Release Date</th>
                         <th>Actions</th>
                         
                       </tr>
@@ -34,7 +38,7 @@
                         </td>
                         <td>{{$songs->songpath}}</td>
                         <td>{{$songs->duration}}</td>
-                        <td>{{$songs->realesedate}}</td>
+                        <td>{{$songs->releasedate}}</td>
                         <td><a class="btn btn-primary btn-sm" href ="/edit/{{$songs->songid}}"> Edit</a>
                           <a class="btn btn-danger btn-sm" href ="/delete/{{$songs->songid}}"> Delete</a></td>
                       </tr>
@@ -46,7 +50,7 @@
                         <th>Song Title</th>
                         <th>Song Path</th>
                         <th>Duration</th>
-                        <th>Realese Date</th>
+                        <th>Release Date</th>
                         <th>Actions</th>
                         
                       </tr>

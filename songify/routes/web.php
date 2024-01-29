@@ -54,5 +54,4 @@ Route::get('/edit/{id}',[a_songController::class,'edit']);
 Route::post('/update',[a_songController::class,'update']);
 Route::get('/songs',function(){
     return view('Client Side.song');
-      
 });

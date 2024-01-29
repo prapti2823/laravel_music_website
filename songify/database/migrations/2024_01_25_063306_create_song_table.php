@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('songname',70);
             $table->text('songpath');
             $table->text('duration',8);
-            $table->date('realesedate');
+            $table->date('releasedate');
            // $table->id('artistid')->unsigned();;
             //$table->id('categoryid')->unsigned();;
 

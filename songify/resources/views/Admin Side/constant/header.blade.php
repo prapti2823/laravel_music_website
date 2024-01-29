@@ -360,9 +360,31 @@
               </svg></i>&nbsp;&nbsp;&nbsp;
               <p>
                 Songs
-                {{-- <i class="right fas fa-angle-left"></i> --}}
+                <i class="right fas fa-angle-left"></i>
               </p>
+
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/song" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Song List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Song</p>
+                </a>
+              </li>
+              {{-- <li class="nav-item">
+                <a href="/edit" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Edit Song</p>
+                </a>
+              </li> --}}
+            </ul>
+          </li>
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>

@@ -28,7 +28,7 @@ class a_songController extends Controller
         $songs->songname = $r->songname;
         $songs->songpath = $r->songpath;
         $songs->duration= $r->duration;
-        $songs->realesedate = $r->realesedate;
+        $songs->releasedate = $r->releasedate;
         //saving
 
         $songs->save();
@@ -65,7 +65,7 @@ class a_songController extends Controller
             "songname" => $r->songname,
             "songpath" => $r->songpath,
             "duration" => $r->duration,
-            "realesedate" => $r->realesedate
+            "releasedate" => $r->releasedate
         ]);
 
         return redirect('/song');
