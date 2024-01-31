@@ -11,7 +11,7 @@ class a_songController extends Controller
     {
         $songs=songs::all();
         $data=compact('songs');
-        return view('Admin Side.Song.view')->with($data);;
+        return view('Admin Side.Song.view')->with($data);
     }
     public function store(Request $r)
     {
