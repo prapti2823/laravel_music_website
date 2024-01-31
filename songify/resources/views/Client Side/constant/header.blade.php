@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>SolMusic | HTML Template</title>
+	<title>SolMusic</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="SolMusic HTML Template">
 	<meta name="keywords" content="music, html">
@@ -43,17 +43,24 @@
 		<div class="header-right">
 			{{-- <a href="#" class="hr-btn">Help</a>
 			<span>|</span> --}}
+			
 			<div class="user-panel">
 				@if(session()->has('userid'))
-				<a href="/" class="register">{{session()->get('fullname')}}</a>
-				<a href="/" class="register"><img src={{session()->get('photo')}} class="rounded-circle" height="50" width="50"/></a>
-				{{-- <img src="uploads/{{$user->photo}}" class="rounded-circle" height="80" width="80"/> --}}
+					<li>
+					<a href="/" class="register">{{session()->get('fullname')}}</a>
+					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/></a>
+				
+					{{-- <ul class="sub-menu">
+						<li><a href="/logout">Logout</a></li>
+					</ul> --}}
+				</li>
 			@else	
 				<a href="/loginPage" class="login">Login</a>
 				<span>|</span>
 				<a href="/register" class="register">Create an account</a>
 			@endif
-			</div> 
+			</div>
+		
 		</div>
 		<ul class="main-menu">
 			<li><a href="/">Home</a></li>
@@ -63,8 +70,8 @@
 					{{-- <li><a href="/category">Category</a></li> --}}
 					<li><a href="/playlist">Playlist</a></li>
 					<li><a href="/artist">Artist</a></li>
-					{{-- <li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li> --}}
+					<li><a href="/songs">Songs</a></li>
+					{{--<li><a href="contact.html">Contact</a></li> --}}
 				</ul>
 			</li>
 			<li><a href="blog.html">News</a></li>
