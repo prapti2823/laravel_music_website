@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class artist extends Model
+class feedback extends Model
 {
     use HasFactory;
-    protected $table="artists";
-    protected $primarykey="artistid";
+
+    protected $table = "feedback";
+    protected $primarykey = "feedbackid";
 }

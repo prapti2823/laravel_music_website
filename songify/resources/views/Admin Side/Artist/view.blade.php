@@ -1,15 +1,10 @@
 @extends('Admin Side.constant.content')
 
-@push('title')
-    <title> Artist View</title>
-@endpush
-
 @push('heading')
     {{"Artist List"}}
 @endpush
 
 @section('main-section')
-    {{-- <div class="card" style="background-color: black; color: grey"> --}}
     <div class="card" >
 
         <div class="card-header">
@@ -17,7 +12,7 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <a href="/#" class="btn btn-primary" > Add New Artist</a>
+        <a href="/add/artist" class="btn btn-primary" > Add New Artist</a>
         <br><br>
 
       <table id="example1" class="table table-bordered table-striped">
@@ -25,7 +20,7 @@
         <tr>
           <th>Artist Id</th>
           <th>Artist name</th>
-          <th>Image</th>
+          <th>Photo</th>
           <th>Song Name</th>
           <th>Actions</th>
         </tr>
@@ -33,126 +28,18 @@
         
         <tbody>
 
-        {{-- @foreach($register as $user)
+        @foreach($artists as $artist)
             <tr>
-            <td>{{$user->userid}}</td>
-            <td>{{$user->fullname}}  </td>
-            <td>{{$user->email}}</td>
-            <td>{{$user->password}}</td>
+            <td>{{$artist->artistid}}</td>
+            <td>{{$artist->artistname}}  </td>
+            <td><img src="uploads/{{$artist->photo}}" class="rounded-circle" height="80" width="80"/></td>
+            <td>{{$artist->songname}}</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
+                <a class="btn btn-primary btn-sm" href ="/edit/{{$artist->artistid}}"> Edit</a>
+                <a class="btn btn-danger btn-sm" href ="/delete/{{$artist->artistid}}"> Delete</a>
             </td>
             </tr>
-        @endforeach --}}
-
-        <tr>
-          <td>1</td>
-          <td>Arjit Singh </td>
-          <td>Image</td>
-          <td></td>
-          <td>
-            <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-            <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-          </td>
-        </tr>
-        
-        
-        
-        <tr>
-          <td>2</td>
-          <td>Harry styles</td>
-          <td>Image</td>
-          <td></td>
-          <td>
-            <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-            <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-          </td>          
-        </tr>
-        
-        <tr>
-            <td>3</td>
-            <td>Taylor Swift</td>
-            <td>Image</td>
-            <td></td>
-            <td>
-              <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-              <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>          
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Bille Eilish</td>
-            <td></td>
-            <td></td>   
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>                         
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Atif Aslam</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-          
-          <tr>
-            <td>6</td>
-            <td>Dua Lipa</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-
-          <tr>
-            <td>7</td>
-            <td>Ariana Grande</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Ed Sheeran</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>A.R Rahman</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Arman Malik</td>
-            <td></td>
-            <td></td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="#"> Edit</a>
-                <a class="btn btn-danger btn-sm" href="#"> Delete</a>
-            </td>    
-          </tr>
-
+        @endforeach       
 
         </tbody>
         <tfoot>

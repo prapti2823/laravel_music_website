@@ -28,10 +28,11 @@
 <!--===============================================================================================-->
 </head>
 <body>
+	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('login/images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="/auth">
+				<form class="login100-form validate-form" method="POST" action="/adminlogin/auth">
 					@csrf
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
@@ -64,12 +65,12 @@
 						</button>
 					</div>
 
-					<div class="text-center p-t-90">
+					{{-- <div class="text-center p-t-90">
                         Don't have an account ? 
 						<a class="txt1 input100" href="/register">
 							Register
 						</a>
-					</div>
+					</div> --}}
 				</form>
 			</div>
 		</div>

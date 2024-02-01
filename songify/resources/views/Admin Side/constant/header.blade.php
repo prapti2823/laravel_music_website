@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  @stack('title')
+  {{-- @stack('title') --}}
+  <title>SOL Music Admin</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,13 +29,15 @@
   <link rel="stylesheet" href={{asset('Admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}>
   <link rel="stylesheet" href={{asset('Admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}>
   <link rel="stylesheet" href={{asset('Admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}>
+  <link href="img/favicon.ico" rel="shortcut icon"/>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="Admin/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    {{-- <img class="animation__shake" src="Admin/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60"> --}}
+    <img class="animation__shake" src="Client/img/logo.png" alt="Songify">
   </div>
 
   <!-- Navbar -->
@@ -45,7 +48,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -183,7 +186,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/admin" class="brand-link">
-      <img src="Admin/dist/img/AdminLTELogo.png" alt="Spotify Clone" class="img-circle" style="opacity: .8"  width="80px" height="50px">
+      <img src="Client/img/logo.png" alt="Songify" class="img-circle" style="opacity: .8"  width="80px" height="50px">
       <span class="brand-text font-weight-light">Songify</span>
     </a>
 
@@ -315,7 +318,7 @@
             </ul> --}}
           </li>
           <li class="nav-item">
-            <a href="/admin/artist" class="nav-link">
+            <a href="/adminartist" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
               </svg>&nbsp;&nbsp;&nbsp;
@@ -519,10 +522,10 @@
             </a>
           </li> --}}
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="/feedbackdata" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                Gallery
+                Feedbacks Data
               </p>
             </a>
           </li>

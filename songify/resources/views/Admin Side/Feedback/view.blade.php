@@ -13,24 +13,22 @@
                         <th>User Id</th>
                         <th>User Name</th>
                         <th>Email</th>
-                        <th>Profile Picture</th>
-                        <th>Date added</th>
+                        <th>Message</th>
                         <th>Actions</th>
                         {{-- <th>Profile Picture</th>
                         <th>Favourite Generes of user</th> --}}
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach($users as $user)
+                      @foreach($feedback as $f)
                       <tr>
-                        <td>{{$user->userid}}</td>
-                        <td>{{$user->fullname}}</td>
-                        <td>{{$user->email}}</td>
-                        <td><img src="uploads/{{$user->photo}}" class="rounded-circle" height="80" width="80"/></td>
-                        <td>{{$user->created_at}}</td>
+                        <td>{{$f->feedbackid}}</td>
+                        <td>{{$f->username}}</td>
+                        <td>{{$f->email}}</td>
+                        <td>{{$f->feedback}}</td>
                         <td>
                           {{-- <a class="btn btn-primary btn-sm" href =""> Edit</a> --}}
-                          <a class="btn btn-danger btn-sm" href ="/delete/{{$user->userid}}"> Delete</a></td>
+                          <a class="btn btn-danger btn-sm" href ="/delete/{{$f->feddbackid}}"> Delete</a></td>
                       </tr>
                       @endforeach
                     </tbody>
@@ -39,8 +37,7 @@
                         <th>User Id</th>
                         <th>User Name</th>
                         <th>Email</th>
-                        <th>Profile Picture</th>
-                        <th>Date added</th>
+                        <th>Message</th>
                         <th>Actions</th>
 
                         {{-- <th>Profile Picture</th>

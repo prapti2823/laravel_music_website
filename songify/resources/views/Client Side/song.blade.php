@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @include('Client Side.constant.header')
 
 <section class="category-section spad">
@@ -194,7 +195,14 @@
 <footer>
 @include('Client Side.constant.footer')
 </footer>
+=======
+@if(session()->has('userid'))
 
-    
-    
-  
+@extends('Client Side.constant.content')
+>>>>>>> 92400b0f8ebfda68f94b825cc564f7c1004af75f
+
+@else
+	<script>
+        window.location = "/loginPage"; // Redirect to loginPage if not logged in
+    </script>
+@endif

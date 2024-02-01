@@ -41,6 +41,7 @@
 			<img src="Client/img/logo.png" alt="">
 		</a>
 		<div class="header-right">
+<<<<<<< HEAD
 			{{-- <a href="#" class="hr-btn">Help</a>
 			<span>|</span> --}}
 			
@@ -62,20 +63,47 @@
 			</div>
 		
 		</div>
+=======
+        <div class="user-panel">
+            @if(session()->has('userid'))
+                <div>
+                    <a href="/" class="register">{{session()->get('fullname')}}</a>
+                    <a href="/" class="register">
+                        <img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="/logout">Logout</a></li>
+						<li><a href="/adminlogin">Admin Panel</a></li>
+                    </ul>
+                </div>
+            @else
+                <a href="/loginPage" class="login">Login</a>
+                <span>|</span>
+                <a href="/register" class="register">Create an account</a>
+            @endif
+        </div>
+    </div>
+>>>>>>> 92400b0f8ebfda68f94b825cc564f7c1004af75f
 		<ul class="main-menu">
+		@if(session()->has('userid'))
 			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
+			<li><a href="/playlist">Playlist</a></li>
 			<li><a href="#">Pages</a>
 				<ul class="sub-menu">
 					{{-- <li><a href="/category">Category</a></li> --}}
-					<li><a href="/playlist">Playlist</a></li>
+					{{-- <li><a href="/playlist">Playlist</a></li> --}}
 					<li><a href="/artist">Artist</a></li>
 					<li><a href="/songs">Songs</a></li>
 					{{--<li><a href="contact.html">Contact</a></li> --}}
 				</ul>
 			</li>
-			<li><a href="blog.html">News</a></li>
+			{{-- <li><a href="blog.html">News</a></li> --}}
 			<li><a href="/feedback">Contact</a></li>
+		@else 
+			<script>
+				window.href="/";
+			</script>
+		@endif
 		</ul>
 	</header>
 	<!-- Header section end -->
