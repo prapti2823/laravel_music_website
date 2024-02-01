@@ -1,3 +1,5 @@
+@if(session()->has('userid'))
+
 @extends('Client Side.constant.content')
 
 @section('main-section')
@@ -360,5 +362,10 @@
 			</div>
 		</div>
 	</section>
-	<!-- Similar Songs section end -->  
-@endsection
+	<!-- Similar Songs section end -->
+	@endsection  
+@else
+	<script>
+        window.location = "/loginPage"; // Redirect to loginPage if not logged in
+    </script>
+@endif

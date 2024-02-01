@@ -32,7 +32,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/register', [registrationController::class, 'index']);
 Route::post('/register/store', [registrationController::class, 'store']);
 Route::get('/loginPage', [loginController::class, 'index']);
-Route::post('/auth',[loginController::class,'auth']);
+Route::post('/auth', [loginController::class, 'auth']);
+Route::get('/logout', [loginController::class, 'logout']);
 
 
 //Client side Routes
@@ -40,14 +41,14 @@ Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
 Route::get('/Artist', [c_ArtistController::class, 'index']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
-Route::get('/songs',[c_SongController::class,'index']);
+Route::get('/songs', [c_SongController::class, 'index']);
 
 //admin index page and user records
 Route::get('/adminPage', [a_indexController::class, 'index']);
 Route::get('/user', [a_userController::class, 'index']);
-Route::get('/artist', [a_artistController::class, 'index']);
+Route::get('/adminartist', [a_artistController::class, 'index']);
 Route::get('/delete/{userid}', [a_userController::class, 'delete']);
-Route::post('/store',[a_songController::class,'store']);
+Route::post('/store', [a_songController::class, 'store']);
 
 
 //Admin side song details and crud operations
@@ -56,14 +57,14 @@ Route::get('/add', function () {
     return view('Admin Side.Song.add');
 });
 Route::get('/delete/{id}', [a_songController::class, 'delete']);
-Route::get('/edit/{id}',[a_songController::class,'edit']);
-Route::post('/update',[a_songController::class,'update']);
+Route::get('/edit/{id}', [a_songController::class, 'edit']);
+Route::post('/update', [a_songController::class, 'update']);
 
 //Admin side Artist details and crud operations
-Route::post('/astore',[a_artistController::class,'store']);
+Route::post('/astore', [a_artistController::class, 'store']);
 Route::get('/delete/{artistid}', [a_artistController::class, 'delete']);
-Route::get('/edit/{id}',[a_artistController::class,'edit']);
-Route::post('/a_update',[a_artistController::class,'update']);
-Route::get('/add/artist',function(){
+Route::get('/edit/{id}', [a_artistController::class, 'edit']);
+Route::post('/a_update', [a_artistController::class, 'update']);
+Route::get('/add/artist', function () {
     return view('Admin Side.Artist.add');
 });

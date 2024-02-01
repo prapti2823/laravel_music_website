@@ -1,10 +1,10 @@
 
 /*=================================
 -----------------------------------
-  SolMusic HTML Template
-  Version: 1.0
- ---------------------------------
- =================================*/
+SolMusic HTML Template
+Version: 1.0
+---------------------------------
+=================================*/
 
 
 
@@ -18,6 +18,57 @@ body {
 	font-family: "Montserrat", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+
+.user-panel {
+	position: relative;
+	display: inline-block;
+}
+
+.user-panel .sub-menu {
+	display: none;
+	position: absolute;
+	width: 150px;
+	top: 100%;
+	padding: 10px;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: 50px;
+	right: 0;
+	background-color: #fff;
+	z-index: 99;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s ease-out 0.2s;
+	-webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+	/* Adjust the width as needed */
+}
+
+.user-panel:hover .sub-menu {
+	display: block;
+}
+
+.user-panel .sub-menu li {
+	display: block;
+}
+
+.user-panel .sub-menu li a {
+	/* Adjust the text color as needed */
+	text-decoration: none;
+	display: block;
+	color: #000;
+	margin-left: 0;
+	padding: 5px 20px;
+}
+
+.user-panel .sub-menu li a:hover {
+	color: #fc0254;
+}
+
+.user-panel:hover .sub-menu {
+	visibility: visible;
+	opacity: 1;
+	margin-top: 0px;
 }
 
 h1,
