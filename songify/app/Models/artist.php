@@ -9,5 +9,5 @@ class artist extends Model
 {
     use HasFactory;
     protected $table="artists";
-    protected $primarykey="id";
+    protected $primarykey="artistid";
 }

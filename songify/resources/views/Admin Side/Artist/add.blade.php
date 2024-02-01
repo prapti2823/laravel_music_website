@@ -1,9 +1,5 @@
 @extends('Admin Side.constant.content')
 
-@push('title')
-    <title>Add New Artist </title>
-@endpush
-
 @push('path')
   {{"Add Artist"}}
 @endpush
