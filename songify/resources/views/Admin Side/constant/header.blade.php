@@ -366,7 +366,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/song" class="nav-link">
+                <a href="/adminSong" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Song List</p>
                 </a>

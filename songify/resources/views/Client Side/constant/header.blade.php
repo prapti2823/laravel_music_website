@@ -48,7 +48,7 @@
 				@if(session()->has('userid'))
 					<li>
 					<a href="/" class="register">{{session()->get('fullname')}}</a>
-					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/></a>
+					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="50" width="50"/></a>
 				
 					{{-- <ul class="sub-menu">
 						<li><a href="/logout">Logout</a></li>

@@ -63,6 +63,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src={{asset('Client/js/owl.carousel.min.js')}}></script>
 	<script src={{asset('Client/js/mixitup.min.js')}}></script>
 	<script src={{asset('Client/js/main.js')}}></script>
+	<!-- Include jQuery -->
+<script src={{asset("https://code.jquery.com/jquery-3.6.0.min.js")}}></script>
+
+<!-- Include jPlayer script -->
+<script src={{asset("https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js")}}></script>
+<script src="Client/js/jplayerInit.js"></script>  
 
 	</body>
 </html>

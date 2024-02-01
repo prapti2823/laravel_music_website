@@ -22,6 +22,7 @@
                     <thead>
                       <tr>
                         <th>Song Id</th>
+                        <th>Song Image</th>
                         <th>Song Title</th>
                         <th>Song Path</th>
                         <th>Duration</th>
@@ -33,20 +34,24 @@
                     <tbody>
                       @foreach($songs as $songs)
                       <tr>
-                        <td>{{$songs->songid}}</td>
-                        <td>{{$songs->songname}}
-                        </td>
-                        <td>{{$songs->songpath}}</td>
-                        <td>{{$songs->duration}}</td>
-                        <td>{{$songs->releasedate}}</td>
-                        <td><a class="btn btn-primary btn-sm" href ="/edit/{{$songs->songid}}"> Edit</a>
-                          <a class="btn btn-danger btn-sm" href ="/delete/{{$songs->songid}}"> Delete</a></td>
+                          <td>{{$songs->songid}}</td>
+                          <td><img src="uploads/{{$songs->songimage}}" class="squre" height="100" width="100"/></td>
+                          <td>{{$songs->songname}}</td>
+                          <td>{{$songs->songpath}}</td>
+                          <td>{{$songs->duration}}</td>
+                          <td>{{$songs->releasedate}}</td>
+                          <td>
+                              <a class="btn btn-primary btn-sm" href="/edit/{{$songs->songid}}"> Edit</a>
+                              <a class="btn btn-danger btn-sm" href ="/del/{{$songs->songid}}"> Delete</a></td>
+                            </td>
                       </tr>
                       @endforeach
-                     </tbody>
+                  </tbody>
+                  
                     <tfoot>
                       <tr>
                         <th>Song Id</th>
+                        <th>Song Image</th>
                         <th>Song Title</th>
                         <th>Song Path</th>
                         <th>Duration</th>

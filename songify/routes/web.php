@@ -10,6 +10,7 @@ use App\Http\Controllers\c_homeController;
 use App\Http\Controllers\c_playlistController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registrationController;
+use App\Http\Controllers\c_SongController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,19 +40,17 @@ Route::get('/feedback', [c_feedbackController::class, 'index']);
 
 Route::get('/adminPage', [a_indexController::class, 'index']);
 Route::get('/user', [a_userController::class, 'index']);
-Route::get('/song', [a_songController::class, 'index']);
+Route::get('/adminSong', [a_songController::class, 'index']);
 Route::get('/admin/artist', [a_artistController::class, 'index']);
-Route::get('/delete/{id}', [a_userController::class, 'delete']);
+Route::get('/delete/{userid}', [a_userController::class, 'delete']);
 Route::post('/store',[a_songController::class,'store']);
 Route::get('/add',function(){
     return view('Admin Side.Song.add');
       
 });
-Route::get('/delete/{id}', [a_songController::class, 'delete']);
+Route::get('/del/{songid}', [a_songController::class, 'delete']);
 
-Route::get('/edit/{id}',[a_songController::class,'edit']);
+Route::get('/edit/{songid}',[a_songController::class,'edit']);
 
 Route::post('/update',[a_songController::class,'update']);
-Route::get('/songs',function(){
-    return view('Client Side.song');
-});
+Route::get('/songs',[c_SongController::class,'index']);

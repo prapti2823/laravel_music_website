@@ -11,8 +11,12 @@
 @section('main-section')
 <div class="container">
 <h2>Add New Song</h2>
-  <form action="/store" method="POST" enctype="multipart/form-data">
+  <form action="/store" method="post" enctype="multipart/form-data">
     @csrf
+    <div class="form-group">
+      <label for="text">Song Image:</label>
+      <input type="file" class="form-control" placeholder="Enter Song Image" name="songimage">
+    </div>
     <div class="form-group">
       <label for="text">Song Name:</label>
       <input type="text" class="form-control" placeholder="Enter Song Name" name="songname">
