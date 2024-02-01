@@ -11,8 +11,8 @@
 							<div class="hs-text">
 								<h2><span>Music</span> for everyone.</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a>
+								{{-- <a href="#" class="site-btn">Download Now</a>
+								<a href="#" class="site-btn sb-c2">Start free trial</a> --}}
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -30,8 +30,8 @@
 							<div class="hs-text">
 								<h2><span>Listen </span> to new music.</h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								<a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a>
+								{{-- <a href="#" class="site-btn">Download Now</a>
+								<a href="#" class="site-btn sb-c2">Start free trial</a> --}}
 							</div>
 						</div>
 						<div class="col-lg-6">
