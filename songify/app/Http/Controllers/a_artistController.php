@@ -10,61 +10,59 @@ class a_artistController extends Controller
 {
     public function index()
     {
-        $artist=artist::all();
-        $data=compact('artist');
+        $artists = artist::all();
+        $data = compact('artists');
         return view('Admin Side.Artist.view')->with($data);
     }
     public function store(Request $r)
     {
-        $artist = new artist;
+        $artists = new artist;
 
         $file = $r->file('photo');
         $filename = $file->getClientOriginalName();
         $path = "uploads";
         $file->move($path, $filename);
 
-        $artist->artistname = $r->artistname;
-        $artist->photo = $filename;
-        $artist->songname = $r->songname;
+        $artists->artistname = $r->artistname;
+        $artists->photo = $filename;
+        $artists->songname = $r->songname;
         //saving
 
-        $artist->save();
+        $artists->save();
 
-        return redirect('/admin/artist');
+        return redirect('/artist');
     }
 
     public function delete($artistid)
     {
-        artist::where('artistid',$artistid)->delete();
+        artist::where('artistid', $artistid)->delete();
 
         return back();
     }
 
     public function edit($artistid)
     {
-        $artist = artist::where('artistid',$artistid)->first();
-        $data = compact('artist');
+        $artists = artist::where('artistid', $artistid)->first();
+        $data = compact('artists');
         return view('Admin Side.Artist.edit')->with($data);
     }
 
     public function update(Request $r)
     {
-        
+
         $file = $r->file('photo');
-        if($file)
-        {
+        if ($file) {
             $filename = $file->getClientOriginalName();
             $path = "uploads";
-            $file->move($path,$filename);    
-        }
-        else
-            $filename=$r->currentphoto;
-        
-        artist::where('artistid',$r->artistid)->update([
+            $file->move($path, $filename);
+        } else
+            $filename = $r->currentphoto;
+
+        artist::where('artistid', $r->artistid)->update([
             "artistname" => $r->artistname,
-            "photo"=>$r->photo,
+            "photo" => $r->photo,
             "songname" => $r->songname
-            
+
         ]);
 
         return redirect('/admin/artist');

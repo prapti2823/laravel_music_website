@@ -28,7 +28,8 @@
                         <td>{{$user->email}}</td>
                         <td><img src="uploads/{{$user->photo}}" class="rounded-circle" height="80" width="80"/></td>
                         <td>{{$user->created_at}}</td>
-                        <td><a class="btn btn-primary btn-sm" href =""> Edit</a>
+                        <td>
+                          {{-- <a class="btn btn-primary btn-sm" href =""> Edit</a> --}}
                           <a class="btn btn-danger btn-sm" href ="/delete/{{$user->userid}}"> Delete</a></td>
                       </tr>
                       @endforeach

@@ -8,6 +8,7 @@ use App\Http\Controllers\c_ArtistController;
 use App\Http\Controllers\c_feedbackController;
 use App\Http\Controllers\c_homeController;
 use App\Http\Controllers\c_playlistController;
+use App\Http\Controllers\c_SongController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registrationController;
 use Illuminate\Support\Facades\Route;
@@ -27,40 +28,42 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+//Authentication Routes
 Route::get('/register', [registrationController::class, 'index']);
 Route::post('/register/store', [registrationController::class, 'store']);
 Route::get('/loginPage', [loginController::class, 'index']);
 Route::post('/auth',[loginController::class,'auth']);
 
+
+//Client side Routes
 Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
 Route::get('/artist', [c_ArtistController::class, 'index']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
+Route::get('/songs',[c_SongController::class,'index']);
 
+//admin index page and user records
 Route::get('/adminPage', [a_indexController::class, 'index']);
 Route::get('/user', [a_userController::class, 'index']);
-Route::get('/delete/{id}', [a_userController::class, 'delete']);
-
-Route::get('/song', [a_songController::class, 'index']);
+Route::get('/artist', [a_artistController::class, 'index']);
+Route::get('/delete/{userid}', [a_userController::class, 'delete']);
 Route::post('/store',[a_songController::class,'store']);
-Route::get('/add',function(){
+
+
+//Admin side song details and crud operations
+Route::get('/song', [a_songController::class, 'index']);
+Route::get('/add', function () {
     return view('Admin Side.Song.add');
 });
 Route::get('/delete/{id}', [a_songController::class, 'delete']);
 Route::get('/edit/{id}',[a_songController::class,'edit']);
 Route::post('/update',[a_songController::class,'update']);
-Route::get('/songs',function(){
-    return view('Client Side.song');
-});
 
-Route::get('/admin/artist', [a_artistController::class, 'index']);
+//Admin side Artist details and crud operations
 Route::post('/astore',[a_artistController::class,'store']);
-Route::get('/delete/{id}', [a_artistController::class, 'delete']);
+Route::get('/delete/{artistid}', [a_artistController::class, 'delete']);
 Route::get('/edit/{id}',[a_artistController::class,'edit']);
 Route::post('/a_update',[a_artistController::class,'update']);
-
 Route::get('/add/artist',function(){
     return view('Admin Side.Artist.add');
 });
-
-
