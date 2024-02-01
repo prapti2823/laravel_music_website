@@ -35,7 +35,7 @@ class a_artistController extends Controller
 
     public function delete($artistid)
     {
-        artist::where('artistid', $artistid)->delete();
+        artist::where('artistid',$artistid)->delete();
 
         return back();
     }
@@ -65,7 +65,7 @@ class a_artistController extends Controller
 
         ]);
 
-        return redirect('/admin/artist');
+        return redirect('/artist');
     }
 }
 

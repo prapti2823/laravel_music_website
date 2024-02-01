@@ -38,7 +38,7 @@ Route::post('/auth',[loginController::class,'auth']);
 //Client side Routes
 Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
-Route::get('/artist', [c_ArtistController::class, 'index']);
+Route::get('/Artist', [c_ArtistController::class, 'index']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
 Route::get('/songs',[c_SongController::class,'index']);
 
