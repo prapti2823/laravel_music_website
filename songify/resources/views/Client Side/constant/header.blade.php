@@ -46,10 +46,13 @@
 			
 			<div class="user-panel">
 				@if(session()->has('userid'))
-					<li>
+					<li class="user-info"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<a href="/" class="register">{{session()->get('fullname')}}</a>
 					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/></a>
 				
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
 					{{-- <ul class="sub-menu">
 						<li><a href="/logout">Logout</a></li>
 					</ul> --}}

@@ -1,9 +1,5 @@
 @extends('Admin Side.constant.content')
 
-@push('title')
-    <title> Artist View</title>
-@endpush
-
 @push('heading')
     {{"Artist List"}}
 @endpush
@@ -32,7 +28,7 @@
         
         <tbody>
 
-        @foreach($artist as $artist)
+        @foreach($artists as $artist)
             <tr>
             <td>{{$artist->artistid}}</td>
             <td>{{$artist->artistname}}  </td>

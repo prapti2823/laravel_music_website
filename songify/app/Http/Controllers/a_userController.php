@@ -16,7 +16,7 @@ class a_userController extends Controller
 
     public function delete($userid)
     {
-        usersData::where('userid',$userid)->delete();
+        usersData::where('userid', '=', $userid)->delete();
 
         return back();
     }
