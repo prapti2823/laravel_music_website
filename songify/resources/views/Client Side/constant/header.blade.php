@@ -66,8 +66,8 @@
 			<li><a href="#">Pages</a>
 				<ul class="sub-menu">
 					{{-- <li><a href="/category">Category</a></li> --}}
-					<li><a href="/playlist">Playlist</a></li>
-					<li><a href="/Artist">Artist</a></li>
+					{{-- <li><a href="/playlist">Playlist</a></li> --}}
+					<li><a href="/artist">Artist</a></li>
 					<li><a href="/songs">Songs</a></li>
 					{{--<li><a href="contact.html">Contact</a></li> --}}
 				</ul>
