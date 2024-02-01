@@ -41,31 +41,26 @@
 			<img src="Client/img/logo.png" alt="">
 		</a>
 		<div class="header-right">
-			{{-- <a href="#" class="hr-btn">Help</a>
-			<span>|</span> --}}
-			
-			<div class="user-panel">
-				@if(session()->has('userid'))
-					<li class="user-info"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<a href="/" class="register">{{session()->get('fullname')}}</a>
-					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/></a>
-				
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/logout">Logout</a>
-            </div>
-					{{-- <ul class="sub-menu">
-						<li><a href="/logout">Logout</a></li>
-					</ul> --}}
-				</li>
-			@else	
-				<a href="/loginPage" class="login">Login</a>
-				<span>|</span>
-				<a href="/register" class="register">Create an account</a>
-			@endif
-			</div>
-		
-		</div>
+        <div class="user-panel">
+            @if(session()->has('userid'))
+                <div>
+                    <a href="/" class="register">{{session()->get('fullname')}}</a>
+                    <a href="/" class="register">
+                        <img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="30" width="30"/>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            @else
+                <a href="/loginPage" class="login">Login</a>
+                <span>|</span>
+                <a href="/register" class="register">Create an account</a>
+            @endif
+        </div>
+    </div>
 		<ul class="main-menu">
+		@if(session()->has('userid'))
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="#">Pages</a>
@@ -79,6 +74,11 @@
 			</li>
 			<li><a href="blog.html">News</a></li>
 			<li><a href="/feedback">Contact</a></li>
+		@else 
+			<script>
+				window.href="/";
+			</script>
+		@endif
 		</ul>
 	</header>
 	<!-- Header section end -->
