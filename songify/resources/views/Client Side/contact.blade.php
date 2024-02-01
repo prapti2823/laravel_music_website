@@ -1,3 +1,5 @@
+@if(session()->has('userid'))
+
 @extends('Client Side.constant.content')
 
 @section('main-section')
@@ -20,17 +22,18 @@
 							<li>+34 556788 3221</li>
 							<li>contact@solmusic.com</li>
 						</ul>
-						<form class="contact-from">
+						<form class="contact-from" method="POST" action="/feedback/store">
+							@csrf
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" placeholder="Your name">
+									<input type="text" name="username" placeholder="Your name" value={{session()->get('fullnamephp arti')}}>
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder="Your e-mail">
+									<input type="text" name="email" placeholder="Your e-mail" value={{session()->get('email')}}>
 								</div>
 								<div class="col-md-12">
-									<input type="text" placeholder="Subject">
-									<textarea placeholder="Message"></textarea>
+									{{-- <input type="text" placeholder="Subject"> --}}
+									<textarea placeholder="Message" name="feedback"></textarea>
 									<button class="site-btn">send message</button>
 								</div>
 							</div>
@@ -43,3 +46,9 @@
 	<!-- Blog section end -->
 
 @endsection
+
+@else
+	<script>
+        window.location = "/loginPage"; // Redirect to loginPage if not logged in
+    </script>
+@endif

@@ -50,6 +50,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li><a href="/logout">Logout</a></li>
+						<li><a href="/adminlogin">Admin Panel</a></li>
                     </ul>
                 </div>
             @else
@@ -62,17 +63,17 @@
 		<ul class="main-menu">
 		@if(session()->has('userid'))
 			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
+			<li><a href="/playlist">Playlist</a></li>
 			<li><a href="#">Pages</a>
 				<ul class="sub-menu">
 					{{-- <li><a href="/category">Category</a></li> --}}
-					<li><a href="/playlist">Playlist</a></li>
+					{{-- <li><a href="/playlist">Playlist</a></li> --}}
 					<li><a href="/artist">Artist</a></li>
 					<li><a href="/songs">Songs</a></li>
 					{{--<li><a href="contact.html">Contact</a></li> --}}
 				</ul>
 			</li>
-			<li><a href="blog.html">News</a></li>
+			{{-- <li><a href="blog.html">News</a></li> --}}
 			<li><a href="/feedback">Contact</a></li>
 		@else 
 			<script>
