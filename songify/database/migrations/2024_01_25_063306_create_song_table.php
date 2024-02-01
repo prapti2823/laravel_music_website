@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,11 +12,11 @@ return new class extends Migration
     {
         Schema::create('song', function (Blueprint $table) {
             $table->id('songid');
-            $table->text('songname',70);
+            $table->string('songname', 70);
             $table->text('songpath');
-            $table->text('duration',8);
+            $table->string('duration', 8);
             $table->date('releasedate');
-           // $table->id('artistid')->unsigned();;
+            // $table->id('artistid')->unsigned();;
             //$table->id('categoryid')->unsigned();;
 
             $table->timestamps();

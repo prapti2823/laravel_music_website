@@ -11,6 +11,7 @@ use App\Http\Controllers\c_playlistController;
 use App\Http\Controllers\c_SongController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registrationController;
+use App\Http\Controllers\a_adminLogin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,13 +43,20 @@ Route::get('/playlist', [c_playlistController::class, 'index']);
 Route::get('/Artist', [c_ArtistController::class, 'index']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
 Route::get('/songs', [c_SongController::class, 'index']);
+Route::get('/creator', function () {
+    return view('Client Side.about');
+});
+Route::post('/feedback/store', [c_feedbackController::class, 'store']);
 
 //admin index page and user records
+Route::post('/adminlogin/auth',[a_adminLogin::class,'auth']);
+Route::get('/adminlogin',[a_adminLogin::class,'index']);
 Route::get('/adminPage', [a_indexController::class, 'index']);
 Route::get('/user', [a_userController::class, 'index']);
 Route::get('/adminartist', [a_artistController::class, 'index']);
 Route::get('/delete/{userid}', [a_userController::class, 'delete']);
 Route::post('/store', [a_songController::class, 'store']);
+Route::get('/feedbackdata', [c_feedbackController::class, 'feedbackdata']);
 
 
 //Admin side song details and crud operations
