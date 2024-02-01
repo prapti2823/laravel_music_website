@@ -23,11 +23,20 @@ class loginController extends Controller
             $r->session()->put('userid', $data->userid);
             $r->session()->put('fullname', $data->fullname);
             $r->session()->put('email', $data->email);
-            $r->session()->put('photo',$data->photo);
+            $r->session()->put('photo', $data->photo);
             // $r->session()->put('usertype', $data->usertype);
             return redirect('/');
         } else
             return back();
+    }
 
+    public function logout()
+    {
+        session()->forget('userid');
+        session()->forget('email');
+        session()->forget('fullname');
+        session()->forget('photo');
+
+        return redirect('/loginPage');
     }
 }
