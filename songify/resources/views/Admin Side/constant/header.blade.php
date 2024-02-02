@@ -48,11 +48,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Home</a>
+        <a href="/adminPage" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> --}}
     </ul>
 
     <!-- Right navbar links -->
@@ -185,9 +185,10 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/admin" class="brand-link">
-      <img src="Client/img/logo.png" alt="Songify" class="img-circle" style="opacity: .8"  width="80px" height="50px">
-      <span class="brand-text font-weight-light">Songify</span>
+    <a href="/adminPage" class="brand-link">
+      <img src="Client/img/logo.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+      <br>
+      {{-- <span class="brand-text font-weight-light">SOL Music</span> --}}
     </a>
 
     <!-- Sidebar -->
@@ -220,7 +221,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="/admin" class="nav-link active">
+            <a href="/adminPage" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -257,13 +258,13 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="/admin/category" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Category
-                {{-- <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span> --}}
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
               </p>
             </a>
             {{-- <ul class="nav nav-treeview">
@@ -315,8 +316,8 @@
                   <p>Collapsed Sidebar</p>
                 </a>
               </li>
-            </ul> --}}
-          </li>
+            </ul>
+          </li> --}}
           <li class="nav-item">
             <a href="/adminartist" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
@@ -529,14 +530,14 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>
                 Kanban Board
               </p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
@@ -788,7 +789,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>--}}
           {{--<li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="iframe.html" class="nav-link">
