@@ -41,6 +41,29 @@
 			<img src="Client/img/logo.png" alt="">
 		</a>
 		<div class="header-right">
+<<<<<<< HEAD
+			{{-- <a href="#" class="hr-btn">Help</a>
+			<span>|</span> --}}
+			
+			<div class="user-panel">
+				@if(session()->has('userid'))
+					<li>
+					<a href="/" class="register">{{session()->get('fullname')}}</a>
+					<a href="/" class="register"><img src={{asset('uploads/'.session()->get('photo'))}} class="rounded-circle" height="50" width="50"/></a>
+				
+					{{-- <ul class="sub-menu">
+						<li><a href="/logout">Logout</a></li>
+					</ul> --}}
+				</li>
+			@else	
+				<a href="/loginPage" class="login">Login</a>
+				<span>|</span>
+				<a href="/register" class="register">Create an account</a>
+			@endif
+			</div>
+		
+		</div>
+=======
         <div class="user-panel">
             @if(session()->has('userid'))
                 <div>
@@ -60,6 +83,7 @@
             @endif
         </div>
     </div>
+>>>>>>> 92400b0f8ebfda68f94b825cc564f7c1004af75f
 		<ul class="main-menu">
 		@if(session()->has('userid'))
 			<li><a href="/">Home</a></li>
