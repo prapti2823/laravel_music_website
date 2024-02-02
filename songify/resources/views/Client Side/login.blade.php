@@ -31,6 +31,11 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('login/images/bg-01.jpg');">
 			<div class="wrap-login100">
+				@if(Session::has('error'))
+					<div class="alert alert-danger" role="alert">
+						<h4>{{Session::get('error')}}</h4>
+					</div>
+				@endif
 				<form class="login100-form validate-form" method="POST" action="/auth">
 					@csrf
 					<span class="login100-form-logo">

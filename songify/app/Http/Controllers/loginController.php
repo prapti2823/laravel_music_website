@@ -27,8 +27,8 @@ class loginController extends Controller
             // $r->session()->put('usertype', $data->usertype);
             return redirect('/');
         } else
-            return back();
-            // return back()->with('userNotFound', true);
+            // return back();
+            return back()->with('error', 'User does not exist');
     }
 
     public function logout()
