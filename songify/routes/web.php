@@ -70,8 +70,8 @@ Route::post('/update', [a_songController::class, 'update']);
 
 //Admin side Artist details and crud operations
 Route::post('/astore', [a_artistController::class, 'store']);
-Route::get('/delete/{id}', [a_artistController::class, 'delete']);
-Route::get('/edit/{id}', [a_artistController::class, 'edit']);
+Route::get('/a_delete/{id}', [a_artistController::class, 'delete']);
+Route::get('/a_edit/{id}', [a_artistController::class, 'edit']);
 Route::post('/a_update', [a_artistController::class, 'update']);
 Route::get('/add/artist', function () {
     return view('Admin Side.Artist.add');
