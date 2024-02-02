@@ -28,6 +28,7 @@ class loginController extends Controller
             return redirect('/');
         } else
             return back();
+            // return back()->with('userNotFound', true);
     }
 
     public function logout()
