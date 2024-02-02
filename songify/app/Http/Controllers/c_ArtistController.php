@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\artist;
 
 class c_ArtistController extends Controller
 {
     public function index()
     {
-        return view('Client Side.artist');
+        $artist= artist::all();
+        return view('Client Side.artist',['artist' => $artist]);
     }
 }

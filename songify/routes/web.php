@@ -40,7 +40,7 @@ Route::get('/logout', [loginController::class, 'logout']);
 //Client side Routes
 Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
-Route::get('/Artist', [c_ArtistController::class, 'index']);
+Route::get('/artist', [c_ArtistController::class, 'index']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
 Route::get('/songs', [c_SongController::class, 'index']);
 Route::get('/creator', function () {
@@ -70,7 +70,7 @@ Route::post('/update', [a_songController::class, 'update']);
 
 //Admin side Artist details and crud operations
 Route::post('/astore', [a_artistController::class, 'store']);
-Route::get('/delete/{artistid}', [a_artistController::class, 'delete']);
+Route::get('/delete/{id}', [a_artistController::class, 'delete']);
 Route::get('/edit/{id}', [a_artistController::class, 'edit']);
 Route::post('/a_update', [a_artistController::class, 'update']);
 Route::get('/add/artist', function () {
