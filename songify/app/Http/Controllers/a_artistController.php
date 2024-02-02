@@ -59,7 +59,7 @@ class a_artistController extends Controller
 
         artist::where('artistid', $r->artistid)->update([
             "artistname" => $r->artistname,
-            "photo" => $r->photo,
+            "photo" => $filename,
             "songname" => $r->songname
 
         ]);
