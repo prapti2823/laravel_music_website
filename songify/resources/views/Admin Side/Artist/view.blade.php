@@ -35,8 +35,8 @@
             <td><img src="uploads/{{$artist->photo}}" class="rounded-circle" height="80" width="80"/></td>
             <td>{{$artist->songname}}</td>
             <td>
-                <a class="btn btn-primary btn-sm" href ="/edit/{{$artist->artistid}}"> Edit</a>
-                <a class="btn btn-danger btn-sm" href ="/delete/{{$artist->artistid}}"> Delete</a>
+                <a class="btn btn-primary btn-sm" href ="/a_edit/{{$artist->artistid}}"> Edit</a>
+                <a class="btn btn-danger btn-sm" href ="/a_delete/{{$artist->artistid}}"> Delete</a>
             </td>
             </tr>
         @endforeach       
