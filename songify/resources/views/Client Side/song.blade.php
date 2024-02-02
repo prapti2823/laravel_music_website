@@ -1,6 +1,8 @@
-<<<<<<< HEAD
-@include('Client Side.constant.header')
+@if(session()->has('userid'))
 
+@extends('Client Side.constant.content')
+
+@section('main-section')
 <section class="category-section spad">
     <div class="container-fluid">
         <div class="section-title">
@@ -91,7 +93,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">{{$song->duration}}</div>
+                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">0:00{{--{{$song->duration}}--}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -192,14 +194,7 @@
         </div>
     </div>
 </section>
-<footer>
-@include('Client Side.constant.footer')
-</footer>
-=======
-@if(session()->has('userid'))
-
-@extends('Client Side.constant.content')
->>>>>>> 92400b0f8ebfda68f94b825cc564f7c1004af75f
+@endsection
 
 @else
 	<script>
