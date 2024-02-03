@@ -52,7 +52,7 @@ Route::post('/feedback/store', [c_feedbackController::class, 'store']);
 //admin index page and user records
 Route::post('/adminlogin/auth',[a_adminLogin::class,'auth']);
 Route::get('/adminlogin',[a_adminLogin::class,'index']);
-Route::get('/adminPage', [a_indexController::class, 'index']);
+Route::get('/adminPage', [a_indexController::class, 'dashboard']);
 Route::get('/user', [a_userController::class, 'index']);
 Route::get('/delete/{userid}', [a_userController::class, 'delete']);
 Route::post('/store',[a_songController::class,'store']);
