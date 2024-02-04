@@ -73,8 +73,8 @@
                 <div class="col-lg-6">
                     <div class="single_player_container">
                         <div class="single_player">
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_1" data-url="{{ asset('public/uploads/' . $song->songpath) }}"></div>
-                            <div class="jp-audio jp_container_1" role="application" aria-label="media player">
+                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container" data-url="{{$song->songpath}}"  ></div>
+                            <div class="jp-audio jp_container"aria-label="media player">
                                 <div class="jp-gui jp-interface">
 
                                     <!-- Player Controls -->
@@ -86,16 +86,19 @@
                                     </div>
                                     <!-- Progress Bar -->
                                     <div class="player_bars">
+											
                                         <div class="jp-progress">
                                             <div class="jp-seek-bar">
                                                 <div>
-                                                    <div class="jp-play-bar"><div class="jp-current-time" role="timer" aria-label="time">0:00</div></div>
+                                                    <div class="jp-play-bar"><div class="jp-current-time" role="timer" aria-label="time">0:00</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">0:00{{--{{$song->duration}}--}}</div>
+                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">{{$song->duration}}</div>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -111,58 +114,7 @@
         </div>
         <!-- /song -->
         @endforeach
-        <div class="song-item">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="song-info-box">
-                        <img src="Client/img/songs/2.jpg" alt="">
-                        <div class="song-info">
-                            <h4>Michael Smith</h4>
-                            <p>Dream in colors</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single_player_container">
-                        <div class="single_player">
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2" data-url="Client/music-files/2.mp3"></div>
-                            <div class="jp-audio jp_container_2" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-prev player_button" tabindex="0"></button>
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                        <button class="jp-next player_button" tabindex="0"></button>
-                                        <button class="jp-stop player_button" tabindex="0"></button>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar"><div class="jp-current-time" role="timer" aria-label="time">0:00</div></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="songs-links">
-                        <a href=""><img src="Client/img/icons/p-1.png" alt=""></a>
-                        <a href=""><img src="Client/img/icons/p-2.png" alt=""></a>
-                        <a href=""><img src="Client/img/icons/p-3.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
                                     
         <div class="site-pagination pt-5 mt-5">
             <a href="#" class="active">01.</a>
