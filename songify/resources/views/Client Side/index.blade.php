@@ -2,48 +2,15 @@
 
 @section('main-section')
     <!-- Hero section -->
-	 <section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hs-text">
-								<h2><span>Music</span> for everyone.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								{{-- <a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a> --}}
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="hr-img">
-								<img src="Client/img/hero-bg.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hs-item">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hs-text">
-								<h2><span>Listen </span> to new music.</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-								{{-- <a href="#" class="site-btn">Download Now</a>
-								<a href="#" class="site-btn sb-c2">Start free trial</a> --}}
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="hr-img">
-								<img src="Client/img/hero-bg.png" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<div id="video-carousel-example" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active" style="width:1500px">
+			<video  class="video-fluid" autoplay loop muted>
+			<source src="Client/video/a.mp4" type="video/mp4">
+			</video>
+		  </div>
 		</div>
-	</section> 
+	  </div>
 	<!-- Hero section end -->
 
 	<!-- Intro section -->
