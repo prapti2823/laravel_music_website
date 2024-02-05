@@ -82,6 +82,6 @@ Route::post('/astore', [a_artistController::class, 'store']);
 Route::get('/a_delete/{id}', [a_artistController::class, 'delete']);
 Route::get('/a_edit/{id}', [a_artistController::class, 'edit']);
 Route::post('/a_update', [a_artistController::class, 'update']);
-Route::get('/add/artist', function () {
+Route::get('/addartist', function () {
     return view('Admin Side.Artist.add');
 });

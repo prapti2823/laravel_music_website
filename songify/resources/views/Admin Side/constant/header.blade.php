@@ -113,7 +113,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="/adminPage" class="brand-link">
-      <img src="Client/img/logo.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+      <img src="Client/img/logo.png" alt="SOL Music" class="brand-image" style="opacity: .8">
       <br>
       {{-- <span class="brand-text font-weight-light">SOL Music</span> --}}
     </a>
@@ -170,7 +170,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/add/artist" class="nav-link">
+                <a href="/addartist" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Artist</p>
                 </a>
