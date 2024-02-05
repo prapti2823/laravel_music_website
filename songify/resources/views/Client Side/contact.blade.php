@@ -16,7 +16,9 @@
 						<div class="section-title mb-0">
 							<h2>Get in touch</h2>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doe iusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+						<p>
+							Welcome to the heart of our musical community! We're thrilled that you want to connect with us. Whether you have burning questions, suggestions, or just want to share your love for music, our contact page is the place to be. Your feedback is like music to our ears, and we can't wait to hear from you. Feel free to drop us a line using the contact form below, and our dedicated team will get back to you faster than a perfectly timed beat. If you prefer a more direct approach, you can also reach us through the provided email address or give us a ring.
+							</p>
 						<ul>
 							<li>Main Road , No 25/11</li>
 							<li>+34 556788 3221</li>
