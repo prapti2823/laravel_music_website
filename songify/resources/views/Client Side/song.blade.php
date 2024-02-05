@@ -73,10 +73,9 @@
                 <div class="col-lg-6">
                     <div class="single_player_container">
                         <div class="single_player">
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container" data-url="{{$song->songpath}}"  ></div>
-                            <div class="jp-audio jp_container"aria-label="media player">
+                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_{{ $song->songid }}" data-url="{{ $song->songpath }}"></div>
+                            <div class="jp-audio jp_container_{{ $song->songid }}" aria-label="media player">
                                 <div class="jp-gui jp-interface">
-
                                     <!-- Player Controls -->
                                     <div class="player_controls_box">
                                         <button class="jp-prev player_button" tabindex="0"></button>

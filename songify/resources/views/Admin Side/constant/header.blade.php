@@ -30,6 +30,7 @@
   <link rel="stylesheet" href={{asset('Admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}>
   <link rel="stylesheet" href={{asset('Admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}>
   <link href="img/favicon.ico" rel="shortcut icon"/>
+  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
