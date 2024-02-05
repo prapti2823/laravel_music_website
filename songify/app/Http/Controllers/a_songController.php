@@ -58,39 +58,31 @@ class a_songController extends Controller
     }
     public function update(Request $r)
     {
-        $file = $r->file('songimage');
-        if ($file) {
-            $filename = $file->getClientOriginalName();
-            $path = "uploads";
-            $file->move($path, $filename);
-        } else {
-            $filename = $r->currentphoto;
-        }
-
-        // Handle songpath file
-        $songPathFile = $r->file('songpath');
-        if ($songPathFile) {
-            $path = "uploads";
-            $extension = $songPathFile->getClientOriginalExtension();
-            $songPathFileName = "songfile_" . time() . "." . $extension;
-            $songPathFile->move($path, $songPathFileName);
-        }
-
-        songs::where('songid', $r->songid)->update([
-            "songimage" => $filename,
-            "songname" => $r->songname,
-            "duration" => $r->duration,
-            "releasedate" => $r->releasedate
-        ]);
-
-        if ($songPathFile) {
-            songs::where('songid', $r->songid)->update([
-                "songpath" => $path . '/' . $songPathFileName // Save the full path
-            ]);
-        }
-
-        return redirect('/adminSong');
-
+    $file = $r->file('songimage');
+    if ($file) {
+        $filename = $file->getClientOriginalName();
+        $path = "uploads";
+        $file->move($path, $filename);
+    } else {
+        $filename = $r->currentphoto;
     }
+
+    // Handle songpath file
+    $path = "uploads";
+    $songPathFile = $r->file('songpath');
+    $extension = $songPathFile->getClientOriginalExtension();
+    $songPathFileName = "songfile_" . time() . "." . $extension;
+    $songPathFile->move($path, $songPathFileName);
+
+    songs::where('songid', $r->songid)->update([
+        "songimage" => $filename,
+        "songname" => $r->songname,
+        "songpath" => $path . '/' . $songPathFileName, // Save the full path
+        "duration" => $r->duration,
+        "releasedate" => $r->releasedate
+    ]);
+
+    return redirect('/adminSong');
+}
 
 }

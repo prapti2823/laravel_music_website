@@ -26,7 +26,7 @@
         <input type="text" class="form-control" placeholder="Enter Song Duration" name="duration">
       </div>
       <div class="form-group">
-        <label for="text">Realese Date:</label>
+        <label for="text">Release Date:</label>
         <input type="date" class="form-control" name="releasedate">
       </div>
     <button type="submit" class="btn btn-success">Submit</button>
