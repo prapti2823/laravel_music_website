@@ -6,16 +6,16 @@
 <section class="category-section spad">
     <div class="container-fluid">
         <div class="section-title">
-            <h2>Live Concert Playlist</h2>
+            <h2>Songs</h2>
         </div>
         <div class="container">
             <div class="category-links">
-                <a href="" class="active">Genres</a>
+              {{--   <a href="" class="active">Genres</a>
                 <a href="">Artists</a>
-                <a href="">All Playlist</a>
-            </div>
+                <a href="">All Playlist</a>--}}
+            </div> 
         </div>
-        <div class="category-items">
+        {{-- <div class="category-items">
             <div class="row">
                 <div class="col-md-4">
                     <div class="category-item">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
 <!-- Category section end -->
@@ -115,12 +115,12 @@
         @endforeach
       
                                     
-        <div class="site-pagination pt-5 mt-5">
+        {{-- <div class="site-pagination pt-5 mt-5">
             <a href="#" class="active">01.</a>
             <a href="#">02.</a>
             <a href="#">03.</a>
             <a href="#">04.</a>
-        </div>
+        </div> --}}
     </div>
 </section>
 
