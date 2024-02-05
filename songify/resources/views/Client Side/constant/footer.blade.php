@@ -125,5 +125,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src={{asset("Client/js/jplayerInit.js")}}></script>
 <script src={{asset("Client/js/jquery.jplayer.min.js")}}></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+        $(document).ready(function() {
+            $(".jp-jplayer").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "path/to/your/audio.mp3"
+                    });
+                },
+                swfPath: "/path/to/jplayer",
+                supplied: "mp3",
+                useStateClassSkin: true,
+                autoBlur: false,
+                smoothPlayBar: true,
+                keyEnabled: true,
+                remainingDuration: true,
+                toggleDuration: true
+            });
+        });
+    </script>
 </body>
 </html>

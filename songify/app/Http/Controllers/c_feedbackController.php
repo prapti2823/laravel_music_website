@@ -30,4 +30,10 @@ class c_feedbackController extends Controller
         $data = compact('feedback');
         return view('Admin Side.Feedback.view')->with($data);
     }
+
+    public function deletefeedback($feedbackid)
+    {
+        feedback::where('feedbackid', $feedbackid)->delete();
+        return back();
+    }
 }

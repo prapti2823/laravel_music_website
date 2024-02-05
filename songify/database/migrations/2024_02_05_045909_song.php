@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('song', function (Blueprint $table) {
-            $table->id('songid');
+            $table->increments('songid');
             $table->text('songimage');
             $table->text('songname');
             $table->text('songpath');

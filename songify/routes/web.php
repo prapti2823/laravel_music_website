@@ -41,7 +41,7 @@ Route::get('/logout', [loginController::class, 'logout']);
 Route::get('/', [c_homeController::class, 'index']);
 Route::get('/playlist', [c_playlistController::class, 'index']);
 // Route::get('/artist', [c_ArtistController::class, 'index']);
-Route::get('/artist',[c_ArtistController::class,'view']);
+Route::get('/artist', [c_ArtistController::class, 'view']);
 Route::get('/feedback', [c_feedbackController::class, 'index']);
 Route::get('/songs', [c_SongController::class, 'index']);
 Route::get('/creator', function () {
@@ -50,16 +50,18 @@ Route::get('/creator', function () {
 Route::post('/feedback/store', [c_feedbackController::class, 'store']);
 
 //admin index page and user records
-Route::post('/adminlogin/auth',[a_adminLogin::class,'auth']);
-Route::get('/adminlogin',[a_adminLogin::class,'index']);
+Route::get('/adminlogout', [a_adminLogin::class, 'logout']);
+Route::post('/adminlogin/auth', [a_adminLogin::class, 'auth']);
+Route::get('/adminlogin', [a_adminLogin::class, 'index']);
 Route::get('/adminPage', [a_indexController::class, 'dashboard']);
 Route::get('/user', [a_userController::class, 'index']);
 Route::get('/delete/{userid}', [a_userController::class, 'delete']);
-Route::post('/store',[a_songController::class,'store']);
+Route::post('/store', [a_songController::class, 'store']);
 Route::get('/adminartist', [a_artistController::class, 'index']);
 Route::get('/delete/{userid}', [a_userController::class, 'delete']);
 Route::post('/store', [a_songController::class, 'store']);
 Route::get('/feedbackdata', [c_feedbackController::class, 'feedbackdata']);
+Route::get('/deletefeedback/{feedbackid}', [c_feedbackController::class, 'deletefeedback']);
 
 
 //Admin side song details and crud operations
@@ -69,8 +71,8 @@ Route::get('/add', function () {
 });
 Route::get('/del/{songid}', [a_songController::class, 'delete']);
 
-Route::get('/edit/{songid}',[a_songController::class,'edit']);
-Route::get('/songs',[c_SongController::class,'index']);
+Route::get('/edit/{songid}', [a_songController::class, 'edit']);
+Route::get('/songs', [c_SongController::class, 'index']);
 Route::get('/delete/{id}', [a_songController::class, 'delete']);
 Route::get('/edit/{id}', [a_songController::class, 'edit']);
 Route::post('/update', [a_songController::class, 'update']);

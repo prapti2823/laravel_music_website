@@ -106,8 +106,8 @@
                 <div class="col-lg-2">
                     <div class="songs-links">
                         <a href=""><img src="Client/img/icons/p-1.png" alt=""></a>
-                        <a href=""><img src="Client/img/icons/p-2.png" alt=""></a>
-                        <a href=""><img src="Client/img/icons/p-3.png" alt=""></a>
+                        {{-- <a href=""><img src="Client/img/icons/p-2.png" alt=""></a>
+                        <a href=""><img src="Client/img/icons/p-3.png" alt=""></a> --}}
                     </div>
                 </div>
             </div>

@@ -86,11 +86,25 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+          <i class="fas fa-user"></i>
         </a>
-      </li>
+      </li> --}}
+      <li class="nav-item dropdown">
+    <a class="nav-link" data-toggle="dropdown" href="#">
+        @if(session()->has('id'))
+            <div class="d-flex align-items-center">
+                <i class="fas fa-user"></i>
+                <span class="ml-1">{{ session()->get('name') }}</span>
+            </div>
+        @endif
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <a href="/adminlogout" class="dropdown-item">Logout</a>
+    </div>
+</li>
+
     </ul>
   </nav>
   <!-- /.navbar -->

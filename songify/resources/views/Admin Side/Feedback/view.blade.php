@@ -28,7 +28,7 @@
                         <td>{{$f->feedback}}</td>
                         <td>
                           {{-- <a class="btn btn-primary btn-sm" href =""> Edit</a> --}}
-                          <a class="btn btn-danger btn-sm" href ="/delete/{{$f->feddbackid}}"> Delete</a></td>
+                          <a class="btn btn-danger btn-sm" href ="/deletefeedback/{{$f->feddbackid}}"> Delete</a></td>
                       </tr>
                       @endforeach
                     </tbody>
