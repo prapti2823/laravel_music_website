@@ -16,11 +16,13 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
-
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
+<!-- Use default jPlayer skin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/skin/blue.monday/jplayer.blue.monday.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/skin/blue.monday/jplayer.blue.monday.min.css">
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">

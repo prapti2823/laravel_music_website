@@ -125,5 +125,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src={{asset("Client/js/jplayerInit.js")}}></script>
 <script src={{asset("Client/js/jquery.jplayer.min.js")}}></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Use absolute URLs for jPlayer CSS and JS -->
+<script src={{asset("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")}}></script>
+<script src={{asset("https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jquery.jplayer.min.js")}}></script>
+ 
 </body>
 </html>
