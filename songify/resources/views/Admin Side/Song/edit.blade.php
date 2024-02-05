@@ -10,7 +10,7 @@
   <form action="/update" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-      <input type="hidden" name="songimage" value="{{$songs->songimage}}">
+      <input type="hidden" name="currentphoto" value="{{$songs->songimage}}">
       <label for="text">Song Image:</label>
       <input type="file" class="form-control" placeholder="Enter Song Image" name="songimage">
     </div>
